@@ -16,12 +16,14 @@ git:
   depth: false 
 
 env:
-  global:
-    - PIPENV_IGNORE_VIRTUALENVS=1
+  - DB=mysql
 
 install: composer update --no-interaction --no-suggest --no-progress
 
-before_script: composer require atoum/atoum
+before_script: 
+  - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'create database IF NOT EXISTS yiitest;'; fi"
+  - composer require atoum/atoum
+  
 script:
   #- vendor/bin/phpunit -c phpunit.xml.dist --coverage-clover=coverage-report.clover --log-junit=test-report.xml
   - sonar-scanner
