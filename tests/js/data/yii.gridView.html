@@ -8,7 +8,8 @@
 <!-- The main setup -->
 
 <div id="w0" class="grid-view">
-  <table>
+  <section>
+  <table class="main-table">
     <thead>
       <tr>
         <th><input id="w0-check-all" name="selection_all" value="1" type="checkbox"></th>
@@ -28,6 +29,7 @@
         </td>
         <td>
           <select id="w0-tags" name="PostSearch[tags][]" multiple>
+            <option value="" selected>All</option>
             <option value="1">html</option>
             <option value="2">css</option>
             <option value="3">js</option>
@@ -57,12 +59,13 @@
       </tr>
       </tbody>
   </table>
+  </section>
 </div>
 
 <!-- The basic setup, used for testing of multiple grid views -->
 
 <div id="w1" class="grid-view">
-  <table>
+  <table class="table1">
     <thead>
       <tr>
         <th><input name="selection_all" value="1" type="checkbox"></th>
@@ -93,7 +96,7 @@
 <!-- https://github.com/yiisoft/yii2/pull/10284 -->
 
 <div id="w2">
-  <table>
+  <table class="table2">
     <thead>
       <tr>
         <th>Name</th>
@@ -132,7 +135,7 @@
 <!-- Setup for testing that event handlers are correctly removed with new selectors -->
 
 <div id="w3">
-  <table>
+  <table class="table3">
     <thead>
       <tr>
         <th>
