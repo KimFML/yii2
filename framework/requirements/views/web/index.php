@@ -17,18 +17,18 @@
     <hr>
     <main>
         <h3>Description</h3>
-        <p>
+        <span>
         This script checks if your server configuration meets the requirements
         for running Yii application.
         It checks if the server is running the right version of PHP,
         if appropriate PHP extensions have been loaded, and if php.ini file settings are correct.
-        </p>
-        <p>
+        </span>
+        <span>
         There are two kinds of requirements being checked. Mandatory requirements are those that have to be met
         to allow Yii to work as expected. There are also some optional requirements being checked which will
         show you a warning when they do not meet. You can use Yii framework without them but some specific
         functionality may be not available in this case.
-        </p>
+        </span>
 
         <h3>Conclusion</h3>
         <?php if ($summary['errors'] > 0): ?>
@@ -69,8 +69,8 @@
     </main>
     <hr>
     <footer>
-        <p>Server: <?php echo $this->getServerInfo() . ' ' . $this->getNowDate() ?></p>
-        <p>Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></p>
+        <span>Server: <?php echo $this->getServerInfo() . ' ' . $this->getNowDate() ?></span>
+        <span>Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></span>
     </footer>
 </div>
 </body>
